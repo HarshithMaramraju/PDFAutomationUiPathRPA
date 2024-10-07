@@ -1,0 +1,615 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System.Text.RegularExpressions" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>UiPath.PDF</x:String>
+      <x:String>UiPath.PDF.Activities</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.PDF</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1452.0000000000002,6041.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="Number" />
+      <Variable x:TypeArguments="x:String" Name="expoHub" />
+      <Variable x:TypeArguments="x:String" Name="fileName" />
+      <Variable x:TypeArguments="x:String" Name="fullFileName" />
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="dictData" />
+      <Variable x:TypeArguments="x:String" Name="Address1" />
+      <Variable x:TypeArguments="x:String" Name="Address2" />
+      <Variable x:TypeArguments="x:String" Name="Address3" />
+      <Variable x:TypeArguments="x:String" Name="strName" />
+      <Variable x:TypeArguments="x:String" Name="strDate" />
+      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="output" />
+      <Variable x:TypeArguments="x:String" Name="Address4" />
+      <Variable x:TypeArguments="x:String" Name="strInvoiceNum" />
+      <Variable x:TypeArguments="x:String" Name="strAmount" />
+      <Variable x:TypeArguments="x:String" Name="strDueDate" />
+      <Variable x:TypeArguments="x:String" Name="ExtractedText" />
+      <Variable x:TypeArguments="sd:DataTable" Name="outputDataTable" />
+      <Variable x:TypeArguments="x:String" Name="col2" />
+      <Variable x:TypeArguments="x:String" Name="col1" />
+      <Variable x:TypeArguments="sd:DataTable" Name="ExtractDataTable" />
+      <Variable x:TypeArguments="sd:DataTable" Name="DiscriptionTable" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:BuildDataTable DataTable="[outputDataTable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="584,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Column_1&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Column_2&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:BuildDataTable DataTable="[DiscriptionTable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="584,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Description&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Rate&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Quantity&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Line_x0020_Total&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="D:\UIPath_Practice\PDFAutomation\Data" sap:VirtualizedContainerService.HintSize="584,5834.4" sap2010:WorkflowViewState.IdRef="ForEachFileX_2" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+      <ui:ForEachFileX.Body>
+        <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+          <ActivityAction.Argument1>
+            <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentFile" />
+          </ActivityAction.Argument1>
+          <ActivityAction.Argument2>
+            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+          </ActivityAction.Argument2>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="550.4,5548" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="516.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[dictData]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[New Dictionary(of String,String)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:ClearDataTable DataTable="[outputDataTable]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="516.8,112.8" sap2010:WorkflowViewState.IdRef="ClearDataTable_1" />
+            <ui:ClearDataTable DataTable="[DiscriptionTable]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="516.8,112.8" sap2010:WorkflowViewState.IdRef="ClearDataTable_2" />
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="516.8,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[fileName]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[CurrentFile.Name.Replace(".pdf","")]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[fullFileName]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[CurrentFile.FullName]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+            </ui:MultipleAssign>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="516.8,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[CurrentFile.FullName]" />
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="516.8,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,166.4" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ReadPDFText PreserveFormatting="{x:Null}" DisplayName="Read PDF Text" FileName="[CurrentFile.FullName]" sap:VirtualizedContainerService.HintSize="382.4,106.4" sap2010:WorkflowViewState.IdRef="ReadPDFText_2" Range="All" Text="[ExtractedText]" />
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="[CurrentFile.FullName]" sap:VirtualizedContainerService.HintSize="516.8,120" sap2010:WorkflowViewState.IdRef="StartProcess_2" />
+            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Application: Invoice 873101.pdf - WPS Office" sap:VirtualizedContainerService.HintSize="516.8,3160" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="IfNotOpen" ScopeGuid="a4c70efe-ce16-42e9-91c5-e14afadac13c" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,2836.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="382.4,245.6" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" Shortcuts="[d(hk)][d(ctrl)][k(Minus)][u(ctrl)][u(hk)]" Version="V4" />
+                    <uix:NGetText DisplayName="Get Text 'ExpoHub'" sap:VirtualizedContainerService.HintSize="382.4,189.6" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="a4c70efe-ce16-42e9-91c5-e14afadac13c" TextString="[expoHub]" Version="V4">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable CVScreenId="ed003154-88e2-4979-935a-d5cf29c7e90b" CvTextArea="1180, 267, 73, 20" CvType="AnyWordGroup" DesignTimeRectangle="1180, 267, 73, 20" DesignTimeScaleFactor="1.25" ElementType="Text" Guid="5cb109fd-a215-4aa6-b8bd-9752667ab21b" ImageBase64="" InformativeScreenshot="d99134910bf247055bef3870b4075466.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='wps.exe' cls='Qt*QWindowIcon' title='Invoice 873101.pdf - WPS Office' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="ed003154-88e2-4979-935a-d5cf29c7e90b" CvTextArea="1165, 290, 88, 16" CvTextArgument="123456789" CvType="Text" DesignTimeRectangle="1165, 290, 88, 16" ElementType="Text" Guid="2189d46f-3df5-4e04-a8c2-fb83841e0ead" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NGetText>
+                    <uix:NGetText DisplayName="Get Text 'Number'" sap:VirtualizedContainerService.HintSize="382.4,189.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="a4c70efe-ce16-42e9-91c5-e14afadac13c" TextString="[Number]" Version="V4">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable CVScreenId="8a68a09b-b17d-4728-bbcd-370f65afeb1c" CvTextArea="1165, 290, 88, 16" CvType="AnyWordGroup" DesignTimeRectangle="1165, 290, 88, 16" DesignTimeScaleFactor="1.25" ElementType="Text" Guid="3f61066b-fe40-43e1-b302-eac831834d70" ImageBase64="" InformativeScreenshot="b49c49e5b0a1df83308cd19a97cf04df.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='wps.exe' cls='Qt*QWindowIcon' title='Invoice 873101.pdf - WPS Office' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="8a68a09b-b17d-4728-bbcd-370f65afeb1c" CvTextArea="1180, 267, 73, 20" CvTextArgument="ExpoHub" CvType="Text" DesignTimeRectangle="1180, 267, 73, 20" ElementType="Text" Guid="19a6f20f-92e8-4627-bc6a-566c29259782" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NGetText>
+                    <uix:NGetText DisplayName="Get Text 'Address1'" sap:VirtualizedContainerService.HintSize="382.4,189.6" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="a4c70efe-ce16-42e9-91c5-e14afadac13c" TextString="[Address1]" Version="V4">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable CVScreenId="70020170-3bc3-4020-b5c8-16a49c0bae2e" CvTextArea="1281, 268, 117, 18" CvType="AnyWordGroup" DesignTimeRectangle="1281, 268, 117, 18" DesignTimeScaleFactor="1.25" ElementType="Text" Guid="fefd19b7-2169-4745-9d1e-4cfe5c00a0a7" ImageBase64="" InformativeScreenshot="ee0dfaa8866e6da32334e1715a5edc0b.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='wps.exe' cls='Qt*QWindowIcon' title='Invoice 873101.pdf - WPS Office' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="70020170-3bc3-4020-b5c8-16a49c0bae2e" CvTextArea="1180, 267, 73, 20" CvTextArgument="ExpoHub" CvType="Text" DesignTimeRectangle="1180, 267, 73, 20" ElementType="Text" Guid="73e0f6a0-df03-4359-84b5-ab0ae3262485" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NGetText>
+                    <uix:NGetText DisplayName="Get Text 'expohub street Address2'" sap:VirtualizedContainerService.HintSize="382.4,189.6" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="a4c70efe-ce16-42e9-91c5-e14afadac13c" TextString="[Address2]" Version="V4">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable CVScreenId="f3d45b66-5ba4-4d8f-a678-85aab4fc3952" CvTextArea="1360, 290, 37, 16" CvType="AnyWordGroup" DesignTimeRectangle="1360, 290, 37, 16" DesignTimeScaleFactor="1.25" ElementType="Text" Guid="d686eeb0-72bc-48b4-9514-bae549d97e7d" ImageBase64="" InformativeScreenshot="426df4d991e6d975389b4a3f8aa2712a.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='wps.exe' cls='Qt*QWindowIcon' title='Invoice 873101.pdf - WPS Office' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="f3d45b66-5ba4-4d8f-a678-85aab4fc3952" CvTextArea="1281, 268, 117, 18" CvTextArgument="expohub street" CvType="Text" DesignTimeRectangle="1281, 268, 117, 18" ElementType="Text" Guid="29b963d1-ad71-41d2-882b-4477ce178192" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NGetText>
+                    <uix:NGetText DisplayName="Get Text 'ABC Address3'" sap:VirtualizedContainerService.HintSize="382.4,189.6" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="a4c70efe-ce16-42e9-91c5-e14afadac13c" TextString="[Address3]" Version="V4">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable CVScreenId="f3d45b66-5ba4-4d8f-a678-85aab4fc3952" CvTextArea="1340, 312, 57, 16" CvType="AnyWordGroup" DesignTimeRectangle="1340, 312, 58, 16" DesignTimeScaleFactor="1.25" ElementType="Text" Guid="d44e17cb-6023-4fc1-832d-eea380ec5c7d" ImageBase64="" InformativeScreenshot="22b01cbeccc61a81303b4ffc6cdac212.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='wps.exe' cls='Qt*QWindowIcon' title='Invoice 873101.pdf - WPS Office' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="f3d45b66-5ba4-4d8f-a678-85aab4fc3952" CvTextArea="1360, 290, 37, 16" CvTextArgument="ABC" CvType="Text" DesignTimeRectangle="1360, 290, 37, 16" ElementType="Text" Guid="1593ba8f-41b4-4db7-bde2-d8d2f3afb23c" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NGetText>
+                    <uix:NGetText DisplayName="Get Text '123456 Address4'" sap:VirtualizedContainerService.HintSize="382.4,189.6" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="a4c70efe-ce16-42e9-91c5-e14afadac13c" TextString="[Address4]" Version="V4">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable CVScreenId="afe64605-e724-43bb-8604-d7d3580b2466" CvTextArea="1358, 335, 38, 16" CvType="AnyWordGroup" DesignTimeRectangle="1358, 335, 38, 16" DesignTimeScaleFactor="1.25" ElementType="Text" Guid="1aa39ea2-fde6-4145-9239-83b5492b8462" ImageBase64="" InformativeScreenshot="3dd8dcc0a646a72d82aa2e70ece4d540.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='wps.exe' cls='Qt*QWindowIcon' title='Invoice 873101.pdf - WPS Office' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="afe64605-e724-43bb-8604-d7d3580b2466" CvTextArea="1340, 312, 58, 16" CvTextArgument="123456" CvType="Text" DesignTimeRectangle="1340, 312, 58, 16" ElementType="Text" Guid="a88cdd05-b661-47d9-b6ea-5262c371fe3d" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NGetText>
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="382.4,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[Address1+&quot; &quot;+Address2+&quot; &quot;+Address3+&quot; &quot;+Address4]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </WriteLine>
+                    <uix:NGetText DisplayName="Get Text 'Nagesh Reddy.'" sap:VirtualizedContainerService.HintSize="382.4,189.6" sap2010:WorkflowViewState.IdRef="NGetText_8" ScopeIdentifier="a4c70efe-ce16-42e9-91c5-e14afadac13c" TextString="[strName]" Version="V4">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable CVScreenId="1e4cd6ab-88b5-4970-b3a0-578703f050e3" CvTextArea="316, 480, 95, 17" CvType="AnyWordGroup" DesignTimeRectangle="316, 480, 95, 17" DesignTimeScaleFactor="1" ElementType="Text" Guid="175c3c57-5c6b-4057-94f0-7c941c877d8f" ImageBase64="" InformativeScreenshot="ba690d8f1967375c3663cc680747cefb.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='wps.exe' cls='Qt*QWindowIcon' title='Invoice 873101.pdf - WPS Office' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="1e4cd6ab-88b5-4970-b3a0-578703f050e3" CvTextArea="316, 462, 54, 14" CvTextArgument="Billed To" CvType="Text" DesignTimeRectangle="316, 462, 54, 14" ElementType="Text" Guid="cfc4f0e1-d262-4603-a8a6-e97e48578365" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NGetText>
+                    <uix:NGetText DisplayName="Get Text 'Date of Issue'" sap:VirtualizedContainerService.HintSize="382.4,189.6" sap2010:WorkflowViewState.IdRef="NGetText_9" ScopeIdentifier="a4c70efe-ce16-42e9-91c5-e14afadac13c" TextString="[strDate]" Version="V4">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable CVScreenId="f984bc52-75a7-4e2b-b3a8-64623b76b9bd" CvTextArea="532, 445, 72, 13" CvType="AnyWordGroup" DesignTimeRectangle="532, 445, 72, 13" DesignTimeScaleFactor="1" ElementType="Text" Guid="9b781e41-a4f8-43f1-b0c8-fb2b0c29ced5" ImageBase64="" InformativeScreenshot="eb1bdf7f221fcdc909c57bd6eab1645d.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='wps.exe' cls='Qt*QWindowIcon' title='Invoice 873101.pdf - WPS Office' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="f984bc52-75a7-4e2b-b3a8-64623b76b9bd" CvTextArea="533, 427, 83, 13" CvTextArgument="Date of Issue" CvType="Text" DesignTimeRectangle="533, 427, 83, 13" ElementType="Text" Guid="9c61e88b-1105-4e10-a303-bfe850216eba" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <uix:NGetText DisplayName="Get Text 'Invoice Number'" sap:VirtualizedContainerService.HintSize="382.4,189.6" sap2010:WorkflowViewState.IdRef="NGetText_10" ScopeIdentifier="a4c70efe-ce16-42e9-91c5-e14afadac13c" TextString="[strInvoiceNum]" Version="V4">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable CVScreenId="1623cca0-d6cb-4a78-82bd-50aad2a591e3" CvTextArea="681, 445, 52, 13" CvType="AnyWordGroup" DesignTimeRectangle="681, 445, 52, 13" DesignTimeScaleFactor="1" ElementType="Text" Guid="e37a2d37-5c95-49ec-9e37-dc85336b6c9d" ImageBase64="" InformativeScreenshot="f53a8a528ba4d4315f3c9812ac6eeffb.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='wps.exe' cls='Qt*QWindowIcon' title='Invoice 873101.pdf - WPS Office' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="1623cca0-d6cb-4a78-82bd-50aad2a591e3" CvTextArea="682, 427, 99, 13" CvTextArgument="Invoice Number" CvType="Text" DesignTimeRectangle="682, 427, 99, 13" ElementType="Text" Guid="14ed59d3-75fc-44af-87a7-d932cd21304f" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <uix:NGetText DisplayName="Get Text 'Amount Due (INR)'" sap:VirtualizedContainerService.HintSize="382.4,189.6" sap2010:WorkflowViewState.IdRef="NGetText_11" ScopeIdentifier="a4c70efe-ce16-42e9-91c5-e14afadac13c" TextString="[strAmount]" Version="V4">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable CVScreenId="1623cca0-d6cb-4a78-82bd-50aad2a591e3" CvTextArea="892, 449, 141, 24" CvType="AnyWordGroup" DesignTimeRectangle="892, 449, 141, 24" DesignTimeScaleFactor="1" ElementType="Text" Guid="b746ef5b-3a6a-4648-84e3-be210c64c68c" ImageBase64="" InformativeScreenshot="15f261b7e5937fbb8d47fd158ab43743.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='wps.exe' cls='Qt*QWindowIcon' title='Invoice 873101.pdf - WPS Office' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="1623cca0-d6cb-4a78-82bd-50aad2a591e3" CvTextArea="917, 427, 115, 16" CvTextArgument="Amount Due (INR)" CvType="Text" DesignTimeRectangle="917, 427, 115, 16" ElementType="Text" Guid="f27fb242-fa89-4b04-a59b-cfbc44d55988" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <uix:NGetText DisplayName="Get Text 'Due Date'" sap:VirtualizedContainerService.HintSize="382.4,189.6" sap2010:WorkflowViewState.IdRef="NGetText_12" ScopeIdentifier="a4c70efe-ce16-42e9-91c5-e14afadac13c" TextString="[strDueDate]" Version="V4">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable CVScreenId="1623cca0-d6cb-4a78-82bd-50aad2a591e3" CvTextArea="533, 506, 71, 12" CvType="AnyWordGroup" DesignTimeRectangle="533, 506, 71, 12" DesignTimeScaleFactor="1" ElementType="Text" Guid="0af6a90f-9b12-4092-9c57-174ab86d9436" InformativeScreenshot="cb45e5700ffb74981f7d86467f6ce251.png" ScopeSelectorArgument="&lt;wnd app='wps.exe' cls='Qt*QWindowIcon' title='Invoice 873101.pdf - WPS Office' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="1623cca0-d6cb-4a78-82bd-50aad2a591e3" CvTextArea="533, 487, 59, 13" CvTextArgument="Due Date" CvType="Text" DesignTimeRectangle="533, 487, 59, 13" ElementType="Text" Guid="eb9b1638-cad6-4766-a343-9e63e214a221" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='CV' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Description' ReferenceIdx='0' Name='Description'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' ReferenceIdx='1' Name='Column1' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Rate' ReferenceIdx='2' Name='Rate'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Qty' ReferenceIdx='3' Name='Qty'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Line Total' ReferenceIdx='4' Name='Line Total'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table table_source='CV' /&gt;" sap:VirtualizedContainerService.HintSize="382.4,189.6" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="a4c70efe-ce16-42e9-91c5-e14afadac13c" Version="V4">
+                      <uix:NExtractData.Target>
+                        <uix:TargetAnchorable CVScreenId="b380725d-bc39-4ba2-a953-b383f06fd6e8" CvElementArea="306, 309, 730, 155" CvType="Table" DesignTimeRectangle="306, 309, 730, 155" DesignTimeScaleFactor="1" ElementType="Table" Guid="e5948d77-8777-49de-8f29-55f8df7ef15d" InformativeScreenshot="0c88b1b08c0e0585dc71747844c0b305.png" ScopeSelectorArgument="&lt;wnd app='wps.exe' cls='Qt*QWindowIcon' title='Invoice 873101.pdf - WPS Office' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive" />
+                      </uix:NExtractData.Target>
+                    </uix:NExtractData>
+                    <ui:CloseApplication DisplayName="Close Application 'wps.exe Invoice'" sap:VirtualizedContainerService.HintSize="382.4,132" sap2010:WorkflowViewState.IdRef="CloseApplication_1">
+                      <ui:CloseApplication.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="de1ffb98-b79f-413a-b3ac-323c9973b77f" InformativeScreenshot="b5cc6863dd07a76b7331286fdc8aaa4e" Selector="&lt;wnd app='wps.exe' cls='Qt*QWindowIcon' title='*.pdf - WPS Office' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:CloseApplication.Target>
+                    </ui:CloseApplication>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="0, 0, 1920, 1020" FilePath="C:\Users\harsh\AppData\Local\Kingsoft\WPS Office\12.2.0.18586\office6\wps.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAb5SURBVFhHpZdbbFRVFIYn0bbTG0xLpzxoQqXl1hZagVLulHuBQsudXmiHYhHUGGKIkkg0qCHRSKhBAi9mFDExvpgYAxEvMUJCAGEgxsQQZVATFB6oAV+Udv3+a+19pkNBUsJKVvaZOTPz7f/fa63ThgYbKIlEekujsb7SaFxGFiektLgHZcPBlRntkbLiBEZF4xgd7dDP+q89fPDHSvpKh3cbhDCUFouMjBrYrkujIqP4ejRzDHMsszwKVHAzYyMl/mcePFQFRkb3mcqRhDAV6KCmWqQsgBcJCMa4IpHyIkgFs5I5fhgwoWif/8nBh6qmzUkHYuoGgusyn4FqVTyWMAOr8mGiYJlAeFWhoLpQZGJhEtWDdANPFFdRZT/8DjBdGMXNEIwxXAPVqtjARcB4rlXcQHUhCIZMKgQmc60pSGJKpMpj7h2q/H5wd86EpYPV6koCVbWBmU86OCYViExm1hRAaguAqdzE1P9xQs9cbbczVssDq5mm2gqMCllgarez2ilGCkzbDUzbJxNYUyAgWKYqPCIyPQLMiCRRd48u0YJLVwy1ezSvfWWnFxgq+89Zwf6cFQwFm+IpppjwCBQsMwifyZw1VDB7yJ2FaUVncK98FJOVbQU2zisuZ6VTsao2sKqmYjtnzXRwLdVO4zqNK8EyYyjhCmbW8XXdEKAu3H8U0OFSRpCvbMybKDj+OXD6pMszPs+m5eF31W5aTfju54BvjwLn+P65Ey7Pp2XiBGTnOgeeO0RkHtcF3gU7e4LvsFvhgwjZ0QqsmCD+5f3j1l8URicWKDxfZFF+j9UCB0gsNcHG0V61+9in/luMq7/dnbdu2i1prwOO7Ldri6u/An8EecWtQVz73eCyMB9YxFycJ731uTHdQNyDxSpb22pTo/8W47Xtvp95vmo3z1gOvg78/CNkGotKoQw5/Y0VmMymyjm0eS5hzZV2T0OOxkHVkMXM+jzIkjxgaW48RHCif3RSfRXXKlb0Lz+5b35/0sDaUgavZREtGAHsbIW8sc19hiG72iBzCJ87FArHfG7ggz3+LqOjAlhC5UvyBEsJX5YraMhLhAjuSW+pYIJh/27/Tf741gYbJNrPqtraSlvq4in3AVqdKjCCMZ9nvICwP707J3ikBs4VWUb1y3Mt0Zh7IxS0lPWyn2Bm9bwS4CYLR+Pjgw7qBonILK7rq1LFJ3uf5+cdOHXOb2/1d3l/D90hGMuZKxTMTTRxbcqRkA2SiTbBRGc2arhOcWetYAtWsCweQdW0dxZTrT72kbun0VLpFC/kBnjGqOd68Tt37xqLsUHtzhEDN+YAK5mrmKtzEKLiHp3ZsJlNcDA6dYg82+B+ROPALuggMXhTqeD2P+79L44ArRWCbdMJzxMtLtkyyd3TeGcbxFRzA6p6lWa2YA1zXc6NEMHngwlmcE4wbzWTk0sHicZlVr0/Z7zZX3x4Zqbg0EusByrWc1arv+KmgugqJzhHRFVTMdZoKjwbWJeVCHFsxp1qX1wK1wLj6NSWklc7/C/xLF9Y6gZJ0N+Xf7CWCooNHWOATWOB2/+6119/CAWL2Z0tsiYbouD1zA2a4XiIT6mY9fP0iLiHBVPBs1nRVCzLHnNTTOPsl5CXV7trhux9GljL+7233RufvAV0b3HXDHllsYFVsawlXMGazcyWMI8u3BHSccgHRk+qwBSuYO3lebRbW+pwWj9fvezW65xsbCsrsFOfuff+5ka16DQunVWrucFAdVhkA6HNYUFLlqCN1zH/WO6bHenW4rJUuLUUHWBlW0utelxSKoM4ftj1sxbYrnr/Zloc2JKyW9TuFq4tWTBwGzewMTNucA26UBKAbZDoOROcPjpxwbdVEFpcjVTPyrYCu3TG32Bcv0IoN0awNBPo7Hbgdm6igxlLexxr9M0f0u3A3ISC9YGRGp2cYJ3lnP8JZ/F7L9oQMbAWGCtbdtQCyQsGxyHWQQBWuzdy3Uhoe6YgpvCsu/9S1logPIlFBNY71WIzm8lzTtmtvbySPU2wsK2sstPOWc9YvGJpy4IouIOvDcwNdGYlU2c/MFDPP0qX5CexjBvQmd3gZ/YKWs1BkmopGyRc11o/i7UUFRtYFbdmiYHbeR2AN2XQxUzCB1g/MKi2ik+qJALFNsEGDBIqtuKyAlMoV1XcSpgD+3NWMHNzJpiEZ1R7zP0DTeESgpPSRBjtDgZJaoKp1d5unrNrKZ6z9IM5kAwKPJUJ6RqE8oGBpkikb2Vut6z2Zxyodr3MM1bVhFlle7javUkzQxTs8tF92P4Q/6xyXJZQbVzWG9gNEV9gtFvEFCuUSjuZmzOoPKMHXVndiIUeTPX9Qh3pbQnH+lrD7/OME9Ke2WN2q+LOjBu0O4GucLy385HY4BWHQv8Bf6mN6bD8CicAAAAASUVORK5CYII=" InformativeScreenshot="c329af1e8b5962ca13c60ae4abbb2771.png" Selector="&lt;wnd app='wps.exe' cls='Qt*QWindowIcon' title='Invoice 873101.pdf - WPS Office' /&gt;" Title="Invoice 873101.pdf - WPS Office" />
+              </uix:NApplicationCard.TargetApp>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NApplicationCard>
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="516.8,367.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[dictData("Name")]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[expoHub]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[dictData("Number")]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[Number]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[dictData("Address")]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[Address1 + ", " + Address2 + ", " + Address3+", "+Address4]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[dictData("Billed To")]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[strName]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[dictData("Date Of Issue")]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[strDate]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[dictData("Invoice Number")]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[strInvoiceNum]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[dictData("Amount Dur (INR)")]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[strAmount]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[dictData("Due Date")]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[strDueDate]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+            </ui:MultipleAssign>
+            <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each currentKeyValuePairOfTextAndText" sap:VirtualizedContainerService.HintSize="516.8,56.8" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[dictData]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, x:String)">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:String, x:String)" Name="currentKeyValuePairOfTextAndText" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,573.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="478.4,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[currentKeyValuePairOfTextAndText.Key.ToString+&quot;: &quot;+currentKeyValuePairOfTextAndText.Value.ToString]" />
+                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+                      <ui:MultipleAssign.AssignOperations>
+                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[col1]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[currentKeyValuePairOfTextAndText.key.ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[col2]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[currentKeyValuePairOfTextAndText.Value.ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                        </scg:List>
+                      </ui:MultipleAssign.AssignOperations>
+                    </ui:MultipleAssign>
+                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{col1,col2}]" DataTable="[outputDataTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="478.4,211.2" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEach>
+            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[outputDataTable]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="516.8,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="[&quot;Output\&quot;+fileName+&quot;.xlsx&quot;]" />
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[ExtractDataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="516.8,798.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRowDT" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="483.2,600.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If Condition="[CurrentRowDT(&quot;Description&quot;).ToString = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="449.6,540.8" sap2010:WorkflowViewState.IdRef="If_1">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:Continue sap:VirtualizedContainerService.HintSize="382.4,48" sap2010:WorkflowViewState.IdRef="Continue_1" />
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,271.2" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{CurrentRowDT(&quot;Description&quot;).ToString,CurrentRowDT(&quot;Rate&quot;).ToString,CurrentRowDT(&quot;Qty&quot;).ToString,CurrentRowDT(&quot;Line Total&quot;).ToString}]" DataTable="[DiscriptionTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="382.4,211.2" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[DiscriptionTable]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="516.8,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Sheet2" WorkbookPath="[&quot;Output\&quot;+fileName+&quot;.xlsx&quot;]" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachFileX.Body>
+    </ui:ForEachFileX>
+  </Sequence>
+</Activity>
